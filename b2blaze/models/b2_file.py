@@ -53,8 +53,8 @@ class B2File(object):
         response = self.connector.make_request(path=path, method='post', params=params)
         if response.status_code == 200:
             self.deleted = True
-            del self.parent_list._files_by_name[self.file_name]
-            del self.parent_list._files_by_id[self.file_id]
+            #del self.parent_list._files_by_name[self.file_name]
+            #del self.parent_list._files_by_id[self.file_id]
         else:
             raise B2RequestError(decode_error(response))
             #TODO:  Raise Error
